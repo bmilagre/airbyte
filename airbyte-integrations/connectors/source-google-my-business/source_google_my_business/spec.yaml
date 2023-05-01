@@ -1,0 +1,33 @@
+documentationUrl: https://docs.airbyte.com/integrations/sources/google-my-business
+connectionSpecification:
+  $schema: http://json-schema.org/draft-07/schema#
+  title: Google My Business Source Spec
+  type: object
+  required:
+    - accounts
+    - credentials
+properties:
+    accounts:
+      type: array
+      minItems: 1
+      description: List of accounts ids to extract.
+    credentials:
+      title: OAuth Credentials
+      type: object
+      required:
+      - client_id
+      - client_secret
+      - refresh_token
+      properties:
+        refresh_token:
+          type: string
+          description: Refresh token from Google.
+          airbyte_secret: true
+        client_id:
+          type: string
+          description: OAuth client_id, can be found on Google Cloud.
+        client_secret:
+          type: string
+          description: OAuth client_secret, can be found on Google Cloud.
+          airbyte_secret: true
+    

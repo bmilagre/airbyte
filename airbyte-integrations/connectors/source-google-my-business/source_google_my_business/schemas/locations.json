@@ -1,0 +1,470 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Generated schema for Root",
+    "type": "object",
+    "properties": {
+      "locations": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "profile": {
+              "type": "object",
+              "properties": {
+                "description": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "description"
+              ]
+            },
+            "languageCode": {
+              "type": "string"
+            },
+            "phoneNumbers": {
+              "type": "object",
+              "properties": {
+                "primaryPhone": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "primaryPhone"
+              ]
+            },
+            "serviceItems": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "freeFormServiceItem": {
+                    "type": "object",
+                    "properties": {
+                      "category": {
+                        "type": "string"
+                      },
+                      "label": {
+                        "type": "object",
+                        "properties": {
+                          "displayName": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "displayName"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "category",
+                      "label"
+                    ]
+                  }
+                },
+                "required": [
+                  "freeFormServiceItem"
+                ]
+              }
+            },
+            "openInfo": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string"
+                },
+                "canReopen": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "status",
+                "canReopen"
+              ]
+            },
+            "name": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "specialHours": {
+              "type": "object",
+              "properties": {
+                "specialHourPeriods": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "startDate": {
+                        "type": "object",
+                        "properties": {
+                          "month": {
+                            "type": "number"
+                          },
+                          "day": {
+                            "type": "number"
+                          },
+                          "year": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "month",
+                          "day",
+                          "year"
+                        ]
+                      },
+                      "endDate": {
+                        "type": "object",
+                        "properties": {
+                          "month": {
+                            "type": "number"
+                          },
+                          "day": {
+                            "type": "number"
+                          },
+                          "year": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "month",
+                          "day",
+                          "year"
+                        ]
+                      },
+                      "closed": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "startDate",
+                      "endDate",
+                      "closed"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "specialHourPeriods"
+              ]
+            },
+            "labels": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "adWordsLocationExtensions": {
+              "type": "object",
+              "properties": {
+                "adPhone": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "adPhone"
+              ]
+            },
+            "serviceArea": {
+              "type": "object",
+              "properties": {
+                "businessType": {
+                  "type": "string"
+                },
+                "places": {
+                  "type": "object",
+                  "properties": {
+                    "placeInfos": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "placeName": {
+                            "type": "string"
+                          },
+                          "placeId": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "placeName",
+                          "placeId"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "placeInfos"
+                  ]
+                }
+              },
+              "required": [
+                "businessType",
+                "places"
+              ]
+            },
+            "storefrontAddress": {
+              "type": "object",
+              "properties": {
+                "postalCode": {
+                  "type": "string"
+                },
+                "regionCode": {
+                  "type": "string"
+                },
+                "locality": {
+                  "type": "string"
+                },
+                "addressLines": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "languageCode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "postalCode",
+                "regionCode",
+                "locality",
+                "addressLines",
+                "languageCode"
+              ]
+            },
+            "metadata": {
+              "type": "object",
+              "properties": {
+                "canDelete": {
+                  "type": "boolean"
+                },
+                "mapsUri": {
+                  "type": "string"
+                },
+                "placeId": {
+                  "type": "string"
+                },
+                "newReviewUri": {
+                  "type": "string"
+                },
+                "canModifyServiceList": {
+                  "type": "boolean"
+                },
+                "hasVoiceOfMerchant": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "canDelete",
+                "mapsUri",
+                "placeId",
+                "newReviewUri",
+                "canModifyServiceList",
+                "hasVoiceOfMerchant"
+              ]
+            },
+            "regularHours": {
+              "type": "object",
+              "properties": {
+                "periods": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "openDay": {
+                        "type": "string"
+                      },
+                      "closeDay": {
+                        "type": "string"
+                      },
+                      "openTime": {
+                        "type": "object",
+                        "properties": {
+                          "hours": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "hours"
+                        ]
+                      },
+                      "closeTime": {
+                        "type": "object",
+                        "properties": {
+                          "hours": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "hours"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "openDay",
+                      "closeDay",
+                      "openTime",
+                      "closeTime"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "periods"
+              ]
+            },
+            "categories": {
+              "type": "object",
+              "properties": {
+                "additionalCategories": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "serviceTypes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "displayName": {
+                              "type": "string"
+                            },
+                            "serviceTypeId": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "displayName",
+                            "serviceTypeId"
+                          ]
+                        }
+                      },
+                      "displayName": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "moreHoursTypes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "displayName": {
+                              "type": "string"
+                            },
+                            "hoursTypeId": {
+                              "type": "string"
+                            },
+                            "localizedDisplayName": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "displayName",
+                            "hoursTypeId",
+                            "localizedDisplayName"
+                          ]
+                        }
+                      }
+                    },
+                    "required": [
+                      "serviceTypes",
+                      "displayName",
+                      "name",
+                      "moreHoursTypes"
+                    ]
+                  }
+                },
+                "primaryCategory": {
+                  "type": "object",
+                  "properties": {
+                    "serviceTypes": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "displayName": {
+                            "type": "string"
+                          },
+                          "serviceTypeId": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "displayName",
+                          "serviceTypeId"
+                        ]
+                      }
+                    },
+                    "displayName": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "moreHoursTypes": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "displayName": {
+                            "type": "string"
+                          },
+                          "hoursTypeId": {
+                            "type": "string"
+                          },
+                          "localizedDisplayName": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "displayName",
+                          "hoursTypeId",
+                          "localizedDisplayName"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "serviceTypes",
+                    "displayName",
+                    "name",
+                    "moreHoursTypes"
+                  ]
+                }
+              },
+              "required": [
+                "additionalCategories",
+                "primaryCategory"
+              ]
+            },
+            "websiteUri": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "profile",
+            "languageCode",
+            "phoneNumbers",
+            "serviceItems",
+            "openInfo",
+            "name",
+            "title",
+            "specialHours",
+            "labels",
+            "adWordsLocationExtensions",
+            "serviceArea",
+            "storefrontAddress",
+            "metadata",
+            "regularHours",
+            "categories",
+            "websiteUri"
+          ]
+        }
+      }
+    }
+  }
