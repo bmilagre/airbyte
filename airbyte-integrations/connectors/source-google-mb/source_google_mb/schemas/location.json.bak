@@ -1,0 +1,68 @@
+{
+  "$schema" : "http://json-schema.org/draft-07/schema#",
+  "type" : "object",
+  "properties" : {
+    "multiDailyMetricTimeSeries" : {
+      "type" : "array",
+      "properties" : {
+        "dailyMetricTimeSeries" : {
+          "type": "array",
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "dailyMetric": {
+                "type" : "string",
+                "enum" : [
+                  "DAILY_METRIC_UNKNOWN",
+                  "BUSINESS_IMPRESSIONS_DESKTOP_MAPS",
+                  "BUSINESS_IMPRESSIONS_DESKTOP_SEARCH",
+                  "BUSINESS_IMPRESSIONS_MOBILE_MAPS",
+                  "BUSINESS_IMPRESSIONS_MOBILE_SEARCH",
+                  "BUSINESS_CONVERSATIONS",
+                  "BUSINESS_DIRECTION_REQUESTS",
+                  "CALL_CLICKS",
+                  "WEBSITE_CLICKS",
+                  "BUSINESS_BOOKINGS",
+                  "BUSINESS_FOOD_ORDERS",
+                  "BUSINESS_FOOD_MENU_CLICKS"
+                ]
+              },
+              "timeSeries": {
+                "type" : "object",
+                "properties" : {
+                  "datedValues": {
+                    "type" : "array",
+                    "items" : {
+                      "type" : "object",
+                      "properties" : {
+                        "date": {
+                          "type" : "object",
+                          "properties" : {
+                            "year": {
+                              "type" : "integer"
+                            },
+                            "month": {
+                              "type" : "integer"
+                            },
+                            "day": {
+                              "type" : "integer"
+                            }
+                          }
+                        },
+                        "value": {
+                          "default" : "0",
+                          "type" : ["null", "string"]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "description" : "List of DailyMetric-TimeSeries pairs."
+        }
+      }
+    }
+  }
+}

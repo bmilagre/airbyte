@@ -1,0 +1,10 @@
+{
+  "credentials": {
+    "client_id": "",
+    "client_secret": "",
+    "refresh_token": ""
+  },
+  "location_id" : "int",
+  "start_date" : "2023-01-01",
+  "end_date" : "2023-01-02"
+}

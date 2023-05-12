@@ -1,0 +1,21 @@
+{
+  "streams" : [
+    {
+      "stream": {
+        "name": "location",
+        "json_schema": {
+          "$schema": "http://json-schema.org/draft-04/schem#",
+          "type": "object",
+          "properties": {
+            "location_id": {
+              "type": "string"
+            }
+          }
+        },
+        "supported_sync_modes": ["full_refresh"]
+      },
+      "sync_mode": "full_refresh",
+      "destination_sync_mode": "overwrite"
+    }
+  ]
+}
