@@ -29,8 +29,8 @@
           "date" : {
             "type" : "string"
           },
-          "location" : {
-            "type" : "integer"
+          "location_id" : {
+            "type" : "string"
           }
         }
       }

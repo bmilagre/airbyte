@@ -92,28 +92,31 @@ class Location(HttpStream):
     ) -> Iterable[Mapping]:
         data = response.json()
 
+        print(data)
         result = {
             "records": []
         }
 
         for metric in data['multiDailyMetricTimeSeries'][0]['dailyMetricTimeSeries']:
             metric_name = metric['dailyMetric']
-            print(metric_name)
             for day_entry in metric['timeSeries']['datedValues']:
                 year = str(day_entry['date']['year'])
                 month = "{:02d}".format(day_entry['date']['month'])
                 day = "{:02d}".format(day_entry['date']['day'])
 
                 date = f"{year}-{month}-{day}"
-                value = day_entry["value"] if "value" in day_entry else "0"
+                value = day_entry["value"] if "value" in day_entry else None
+
+                if value is None:
+                    continue
 
                 record = {
                     "type": metric_name,
                     "value": value,
                     "date": date,
-                    "location_id": self.location_id
+                    "location_id": str(self.location_id)
                 }
-                #
-                result["records"].append(record)
 
+                result["records"].append(record)
+        print(result['records'])
         yield result
